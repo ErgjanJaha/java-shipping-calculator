@@ -1,0 +1,16 @@
+version: '3.4'
+services:
+  java:
+    build:
+      context: .
+      target: boot-run
+    volumes:
+      - .:/home/gradle/src
+    ports:
+      - 8080:8080
+  node:
+    build:
+      context: .
+      target: react-dev
+    volumes:
+      - .:/app
