@@ -13,7 +13,12 @@ This command builds all the necessary images to build the React application, boo
 tests at the same time.
 
 To run services execute:
-> docker-compose up
+> docker-compose up database -d
+
+Run this so that the database starts ahead and the application doesn't have a race condition here due to
+Docker not upping these one by one
+then
+> docker-compose up java
 
 By executing the command above, you also create a mysql database server with hardcoded credentials.
 If you want to use your own external mysql server go to `src/main/resources/application.properties` and change the
