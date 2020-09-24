@@ -32,4 +32,5 @@ out/
 
 ### VS Code ###
 .vscode/
-app/
+app/node_modules
+app/build

@@ -1,0 +1,15 @@
+@import url("../../variables");
+
+.EntryList-table {
+  width: @tableWidth;
+  border-collapse: collapse;
+  border: 1px solid;
+  text-align: center;
+  thead > tr, tbody > tr {
+    border: 1px solid;
+  }
+  tr > td:not(:last-child), tr > th:not(:last-child) {
+    padding: 10px;
+    border-right: 1px solid;
+  }
+}

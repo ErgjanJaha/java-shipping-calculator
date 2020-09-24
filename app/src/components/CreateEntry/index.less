@@ -1,0 +1,51 @@
+@import url("../../variables");
+
+
+@width: 10rem;
+.CreateEntry-form {
+  width: @width;
+  .CreateEntry-input {
+    width: @width;
+    padding: 0.35rem;
+    margin-top: 0.25rem;
+    background-color: @primary;
+    border: 1px solid;
+    border-radius: 2px;
+  }
+  .CreateEntry-select {
+    width: @width;
+    padding: 0.35rem;
+    margin-top: 0.25rem;
+    background-color: @primary;
+    border: 1px solid;
+    border-radius: 2px;
+  }
+}
+.successMessage {
+  color: @green;
+}
+
+.CreateEntry-error {
+  color: @red;
+}
+
+.CreateEntry-button {
+  width: 100%;
+  padding: 0.35rem;
+  margin-right: 0.35rem;
+  margin-top: 0.55rem;
+  border: 1px solid;
+  border-radius: 5px;
+  font-weight: bold;
+  background-image: linear-gradient(to right, rgba(159,196,144, 1) 0%, rgba(159,196,144, .2) 50%, rgba(159,196,144, 1) 100%);
+  opacity: .7;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+label {
+  padding-bottom: 2px;
+  color: @black;
+  font-weight: bold;
+}

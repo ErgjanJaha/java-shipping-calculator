@@ -4,13 +4,37 @@ services:
     build:
       context: .
       target: boot-run
+    depends_on:
+      - database
     volumes:
       - .:/home/gradle/src
     ports:
       - 8080:8080
-  node:
+  tests:
     build:
       context: .
-      target: react-dev
+      target: gradle-test
+    working_dir: /home/gradle/src
+    depends_on:
+      - database
     volumes:
-      - .:/app
+      - .:/home/gradle/src
+  database:
+    image: mysql:5.7
+    volumes:
+      - dbdata:/var/lib/mysql
+    environment:
+      - "MYSQL_ROOT_PASSWORD=rootpassword"
+      - "MYSQL_USER=database"
+      - "MYSQL_PASSWORD=passwordlocal"
+      - "MYSQL_DATABASE=shipping"
+    ports:
+      - "${HOST_IP:-127.0.0.1}:${MYSQL_PORT:-3306}:3306"
+#  node:
+#    build:
+#      context: .
+#      target: react-dev
+#    volumes:
+#      - .:/app
+volumes:
+  dbdata:

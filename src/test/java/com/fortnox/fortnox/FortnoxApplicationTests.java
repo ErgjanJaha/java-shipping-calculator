@@ -8,6 +8,7 @@ class FortnoxApplicationTests {
 
 	@Test
 	void contextLoads() {
+
 	}
 
 }
