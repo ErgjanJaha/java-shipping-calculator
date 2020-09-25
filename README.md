@@ -5,7 +5,7 @@ This demo app uses Spring Boot Framework, and can be built and deployed with gra
 In order to deploy this application, you need to execute the following commands:
 > docker-compose build 
 
-To run tests standalone:
+To run tests standalone ( which would require the database to be up, see commands below ):
 > docker-compose run --rm tests
 
 
